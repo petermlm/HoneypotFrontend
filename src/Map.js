@@ -34,8 +34,13 @@ const grads = {
 
 class Map extends Component {
   state = {
-    tooltip: ''
+    tooltip: '',
+    contacts: [],
   }
+
+  setData = (data) => {
+    this.setState({contacts: data});
+  };
 
   render() {
     return (

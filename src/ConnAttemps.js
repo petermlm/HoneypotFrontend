@@ -1,11 +1,14 @@
 import './ConnAttemps.css';
 import React, { Component } from 'react'
-import { settings } from './settings.js'
 
 class ConnAttemps extends Component {
   state = {
     contacts: []
-  }
+  };
+
+  setData = (data) => {
+    this.setState({contacts: data});
+  };
 
   render() {
     return (
@@ -30,15 +33,6 @@ class ConnAttemps extends Component {
         </table>
       </div>
     );
-  }
-
-  componentDidMount() {
-    fetch(settings.endpoint)
-      .then(res => res.json())
-      .then((data) => {
-        this.setState({ contacts: data })
-      })
-      .catch(console.log)
   }
 }
 
