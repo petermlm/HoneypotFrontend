@@ -1,6 +1,7 @@
 import './ConnAttemps.css';
 import React, { Component } from 'react'
 import { AgGridColumn, AgGridReact } from 'ag-grid-react';
+import moment from 'moment'
 import { settings } from './settings.js'
 
 import 'ag-grid-community/dist/styles/ag-grid.css';
@@ -34,6 +35,7 @@ class ConnAttemps extends Component {
     fetch(settings.endpointConnAttemps)
       .then(res => res.json())
       .then((data) => {
+        data.forEach(entry => entry.Time = moment(entry.Time).fromNow());
         this.setState({ data: data });
       })
       .catch(console.log)
