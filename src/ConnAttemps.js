@@ -1,6 +1,10 @@
 import './ConnAttemps.css';
 import React, { Component } from 'react'
+import { AgGridColumn, AgGridReact } from 'ag-grid-react';
 import { settings } from './settings.js'
+
+import 'ag-grid-community/dist/styles/ag-grid.css';
+import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 
 class ConnAttemps extends Component {
   state = {
@@ -14,26 +18,14 @@ class ConnAttemps extends Component {
   render() {
     return (
       <div className="ConnAttemps">
-        <table className="ConnAttempsTable">
-          <thead>
-            <tr>
-              <td>Time</td>
-              <td>IP</td>
-              <td>Port</td>
-              <td>CountryCode</td>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.data.map((value, index) => {
-              return (<tr key={index}>
-                <td>{value.Time}</td>
-                <td>{value.IP}</td>
-                <td>{value.Port}</td>
-                <td>{value.CountryCode}</td>
-              </tr>);
-            })}
-          </tbody>
-        </table>
+        <div className="ag-theme-alpine" style={{width: 810, height: 400}}>
+          <AgGridReact rowData={this.state.data}>
+              <AgGridColumn field="Time"></AgGridColumn>
+              <AgGridColumn field="IP"></AgGridColumn>
+              <AgGridColumn field="Port"></AgGridColumn>
+              <AgGridColumn field="CountryCode"></AgGridColumn>
+          </AgGridReact>
+        </div>
       </div>
     );
   }

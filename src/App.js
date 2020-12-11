@@ -7,6 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1 className="App-Title">Get some of that sweet&nbsp;<span id="App-Title-Honey">Honey</span>!</h1>
         <Map />
         <ConnAttemps />
       </div>

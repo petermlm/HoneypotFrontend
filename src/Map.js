@@ -37,10 +37,10 @@ class Map extends Component {
   render() {
     return (
       <div className="Map">
-        <ComposableMap projectionConfig={{ scale: 147 }} data-tip="">
+        <ComposableMap projectionConfig={{ scale: 147 }} data-tip="" width={900} height={450}>
           <Sphere stroke="#E4E5E6" strokeWidth={0.5} />
           <Graticule stroke="#E4E5E6" strokeWidth={0.5} />
-          <Geographies geography={geoUrl} stroke="#FFF" strokeWidth={0.5}>
+          <Geographies geography={geoUrl} stroke="#29465b" strokeWidth={0.5}>
             {({ geographies }) =>
               geographies.map((geo) => {
                 var count = 0;

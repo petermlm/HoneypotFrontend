@@ -1,7 +1,20 @@
-/* .App { */
-/*   text-align: center; */
-/* } */
+.App {
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+}
 
 .App-link {
   color: #61dafb;
+}
+
+.App-Title {
+  display: flex;
+  justify-content: center;
+  font-family: 'Vollkorn', serif;
+  color: #ffffff;
+}
+
+#App-Title-Honey {
+  color: #ffc30b;
 }
