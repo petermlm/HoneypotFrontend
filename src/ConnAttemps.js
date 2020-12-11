@@ -19,6 +19,7 @@ class ConnAttemps extends Component {
               <td>Time</td>
               <td>IP</td>
               <td>Port</td>
+              <td>CountryCode</td>
             </tr>
           </thead>
           <tbody>
@@ -27,6 +28,7 @@ class ConnAttemps extends Component {
                 <td>{value.Time}</td>
                 <td>{value.IP}</td>
                 <td>{value.Port}</td>
+                <td>{value.CountryCode}</td>
               </tr>);
             })}
           </tbody>
