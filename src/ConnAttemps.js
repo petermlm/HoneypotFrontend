@@ -1,14 +1,15 @@
 import './ConnAttemps.css';
 import React, { Component } from 'react'
+import { settings } from './settings.js'
 
 class ConnAttemps extends Component {
   state = {
-    contacts: []
+    data: []
   };
 
-  setData = (data) => {
-    this.setState({contacts: data});
-  };
+  // setData = (data) => {
+  //   this.setState({data: data});
+  // };
 
   render() {
     return (
@@ -23,7 +24,7 @@ class ConnAttemps extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.contacts.map((value, index) => {
+            {this.state.data.map((value, index) => {
               return (<tr key={index}>
                 <td>{value.Time}</td>
                 <td>{value.IP}</td>
@@ -35,6 +36,15 @@ class ConnAttemps extends Component {
         </table>
       </div>
     );
+  }
+
+  componentDidMount() {
+    fetch(settings.endpointConnAttemps)
+      .then(res => res.json())
+      .then((data) => {
+        this.setState({ data: data });
+      })
+      .catch(console.log)
   }
 }
 

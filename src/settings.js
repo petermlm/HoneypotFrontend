@@ -1,5 +1,6 @@
 let settings = {
-  endpoint: 'http://localhost:8080/connAttemps',
+  endpointConnAttemps: 'http://localhost:8080/connAttemps',
+  endpointMapData: 'http://localhost:8080/map',
 }
 
 export { settings };
