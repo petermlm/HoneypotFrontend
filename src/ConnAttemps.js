@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { AgGridColumn, AgGridReact } from 'ag-grid-react';
 import moment from 'moment'
 import { settings } from './settings.js'
+import { makeUrl } from './util.js'
 
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
@@ -32,7 +33,7 @@ class ConnAttemps extends Component {
   }
 
   componentDidMount() {
-    fetch(settings.endpointConnAttemps)
+    fetch(makeUrl(settings.endpointConnAttemps))
       .then(res => res.json())
       .then((data) => {
         data.forEach(entry => entry.Time = moment(entry.Time).fromNow());
