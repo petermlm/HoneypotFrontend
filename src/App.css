@@ -15,6 +15,17 @@
   color: #ffffff;
 }
 
-#App-Title-Honey {
+.App-Mood {
+  display: flex;
+  justify-content: center;
+  font-family: 'Vollkorn', serif;
+  font-size: 9pt;
+}
+
+.App-Mood a {
+  color: #ffffff;
+}
+
+.App-Honey {
   color: #ffc30b;
 }
