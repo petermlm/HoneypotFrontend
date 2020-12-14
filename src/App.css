@@ -26,3 +26,8 @@
 .App-Mood a {
   color: #ffffff;
 }
+
+.App-TopConsumers-TopFlavors {
+  display: flex;
+  justify-content: center;
+}

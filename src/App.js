@@ -1,8 +1,10 @@
 import './App.css';
 import './Common.css';
 import React, { Component } from 'react'
-import ConnAttemps from './ConnAttemps.js';
 import Map from './Map.js';
+import ConnAttemps from './ConnAttemps.js';
+import TopConsumers from './TopConsumers.js';
+import TopFlavours from './TopFlavours.js';
 
 class App extends Component {
   mood = () => {
@@ -21,12 +23,13 @@ class App extends Component {
         <p className="App-Mood"><a href="#" onClick={this.mood}>get in the&nbsp;<span className="App-Honey">mood</span></a></p>
         <Map />
         <ConnAttemps />
+        <div className="App-TopConsumers-TopFlavors">
+          <TopConsumers />
+          <TopFlavours />
+        </div>
       </div>
     );
   }
-
-  // Map ref={this.mapElement}/
-  // ConnAttemps ref={this.connAttempElement} /
 }
 
 export default App;

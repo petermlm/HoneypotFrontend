@@ -3,6 +3,7 @@ let settings = {
   endpointMapData: 'map',
   endpointConnAttemps: 'connAttemps',
   endpointTopConsumers: 'topConsumers',
+  endpointTopFlavours: 'topFlavours',
 }
 
 export { settings };

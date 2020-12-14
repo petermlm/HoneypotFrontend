@@ -16,7 +16,7 @@ class ConnAttemps extends Component {
 
   render() {
     return (
-      <div className="ConnAttemps">
+      <div className="ConnAttemps Table-Common">
         <h2 className="Table-Title">Latest&nbsp;<span className="Text-Honey">Honey</span>&nbsp;consumptions!</h2>
         <div className="ConnAttemps-Table ag-theme-alpine" style={{width: 810, height: 400}}>
           <AgGridReact rowData={this.state.data}>
