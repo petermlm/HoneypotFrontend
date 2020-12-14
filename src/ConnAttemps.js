@@ -1,4 +1,5 @@
 import './ConnAttemps.css';
+import './Common.css';
 import React, { Component } from 'react'
 import { AgGridColumn, AgGridReact } from 'ag-grid-react';
 import moment from 'moment'
@@ -13,14 +14,11 @@ class ConnAttemps extends Component {
     data: []
   };
 
-  // setData = (data) => {
-  //   this.setState({data: data});
-  // };
-
   render() {
     return (
       <div className="ConnAttemps">
-        <div className="ag-theme-alpine" style={{width: 810, height: 400}}>
+        <h2 className="Table-Title">Latest&nbsp;<span className="Text-Honey">Honey</span>&nbsp;consumptions!</h2>
+        <div className="ConnAttemps-Table ag-theme-alpine" style={{width: 810, height: 400}}>
           <AgGridReact rowData={this.state.data}>
               <AgGridColumn field="Time"></AgGridColumn>
               <AgGridColumn field="IP"></AgGridColumn>

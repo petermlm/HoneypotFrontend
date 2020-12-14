@@ -15,6 +15,7 @@
   color: #ffffff;
 }
 
+
 .App-Mood {
   display: flex;
   justify-content: center;
@@ -24,8 +25,4 @@
 
 .App-Mood a {
   color: #ffffff;
-}
-
-.App-Honey {
-  color: #ffc30b;
 }

@@ -1,0 +1,10 @@
+.Table-Title {
+  display: flex;
+  justify-content: center;
+  font-family: 'Vollkorn', serif;
+  color: #ffffff;
+}
+
+.Text-Honey {
+  color: #ffc30b;
+}
