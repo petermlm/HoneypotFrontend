@@ -1,8 +1,7 @@
 import './TopConsumers.css';
 import './Common.css';
-import HoneyTable from './HoneyTable.js'
+import HoneyTable, { makeCountryName } from './HoneyTable.js'
 import { settings } from './settings.js'
-import { getCountryName } from './util.js'
 
 class TopConsumers extends HoneyTable {
   render() {
@@ -13,19 +12,10 @@ class TopConsumers extends HoneyTable {
         titleAfter="!"
         fields={["CountryName", "Count"]}
         endpoint={settings.endpointTopConsumers}
-        dataTransform={this.dataTransform}
+        dataTransform={makeCountryName}
         style={this.props.style}
       />
     );
-  }
-
-  dataTransform = function(data) {
-    var dataTransformed = []
-    data.forEach(entry => {
-      entry.CountryName = getCountryName(entry.CountryCode);
-      dataTransformed.push(entry);
-    });
-    return dataTransformed
   }
 }
 

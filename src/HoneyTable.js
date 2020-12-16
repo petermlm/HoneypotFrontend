@@ -1,8 +1,9 @@
 import './HoneyTable.css';
 import './Common.css';
 import React, { Component } from 'react'
+import moment from 'moment'
 import { AgGridColumn, AgGridReact } from 'ag-grid-react';
-import { makeUrl } from './util.js'
+import { makeUrl, getCountryName } from './util.js'
 
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
@@ -49,14 +50,30 @@ class HoneyTable extends Component {
       .then(res => res.json())
       .then((data) => {
         if(this.props.dataTransform) {
-          var dataT = this.props.dataTransform(data);
-          this.setState({ data: dataT });
-        } else {
-          this.setState({ data: data });
+          var transforms = this.props.dataTransform;
+          if(!Array.isArray(transforms)) {
+            transforms = [this.props.dataTransform];
+          }
+          transforms.forEach(t => { data = t(data) });
         }
+        this.setState({ data: data });
       })
       .catch(console.log)
   }
 }
 
 export default HoneyTable;
+
+export function makeRelativeTime(data) {
+  return data.map(entry => {
+    entry.Time = moment(entry.Time).fromNow();
+    return entry
+  });
+}
+
+export function makeCountryName(data) {
+  return data.map(entry => {
+    entry.CountryName = getCountryName(entry.CountryCode);
+    return entry
+  });
+}
