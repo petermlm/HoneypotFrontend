@@ -77,3 +77,22 @@ export function makeCountryName(data) {
     return entry
   });
 }
+
+export function makeTargetService(data) {
+  var targetServicePorts = {
+    "3306": "MySQL",
+    "5432": "PostgreSQL",
+    "7474": "Neo4j",
+    "27017": "MongoDB",
+  };
+
+  return data.map(entry => {
+    var port = entry.Port;
+    if(port in targetServicePorts) {
+      entry.TargetService = targetServicePorts[port];
+    } else {
+      entry.TargetService = port;
+    }
+    return entry
+  });
+}

@@ -1,6 +1,6 @@
 import './TopFlavours.css';
 import './Common.css';
-import HoneyTable from './HoneyTable.js'
+import HoneyTable, { makeTargetService} from './HoneyTable.js'
 import { settings } from './settings.js'
 
 class TopFlavours extends HoneyTable {
@@ -10,8 +10,9 @@ class TopFlavours extends HoneyTable {
         titleBefore="Top&nbsp;"
         titleHoney="Flavours"
         titleAfter="!"
-        fields={["Port", "Count"]}
+        fields={["TargetService", "Count"]}
         endpoint={settings.endpointTopFlavours}
+        dataTransform={makeTargetService}
         style={this.props.style}
       />
     );
