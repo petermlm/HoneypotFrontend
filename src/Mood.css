@@ -1,0 +1,7 @@
+.Mood {
+  display: flex;
+  justify-content: center;
+  font-size: 9pt;
+  text-decoration: underline;
+  cursor: pointer;
+}

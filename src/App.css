@@ -11,20 +11,6 @@
 .App-Title {
   display: flex;
   justify-content: center;
-  font-family: 'Vollkorn', serif;
-  color: #ffffff;
-}
-
-
-.App-Mood {
-  display: flex;
-  justify-content: center;
-  font-family: 'Vollkorn', serif;
-  font-size: 9pt;
-}
-
-.App-Mood a {
-  color: #ffffff;
 }
 
 .App-TopConsumers-TopFlavors {

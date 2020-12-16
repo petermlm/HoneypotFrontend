@@ -27,7 +27,7 @@ class HoneyTable extends Component {
 
     return (
       <div className="HoneyTable" style={this.props.style}>
-        <h2 className="HoneyTable-Title">
+        <h2 className="HoneyTable-Title Text-Common">
           <span>{this.props.titleBefore}</span>
           <span className="Text-Honey">{this.props.titleHoney}</span>
           <span>{this.props.titleAfter}</span>
