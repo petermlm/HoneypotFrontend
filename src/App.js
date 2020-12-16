@@ -6,6 +6,7 @@ import Map from './Map.js';
 import ConnAttemps from './ConnAttemps.js';
 import TopConsumers from './TopConsumers.js';
 import TopFlavours from './TopFlavours.js';
+import Footer from './Footer.js';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
           <TopConsumers style={{width: "468px"}} />
           <TopFlavours style={{width: "468px"}} />
         </div>
+        <Footer />
       </div>
     );
   }
