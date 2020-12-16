@@ -1,6 +1,6 @@
 .App {
   margin: auto;
-  width: 70%;
+  max-width: 1264px;
   padding: 10px;
 }
 
@@ -30,4 +30,8 @@
 .App-TopConsumers-TopFlavors {
   display: flex;
   justify-content: center;
+}
+
+.App-ConnAttemps {
+  width: 1000px;
 }

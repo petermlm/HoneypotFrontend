@@ -22,10 +22,10 @@ class App extends Component {
         <h1 className="App-Title">Get some of that sweet&nbsp;<span className="Text-Honey">Honey</span>!</h1>
         <p className="App-Mood"><a href="#" onClick={this.mood}>get in the&nbsp;<span className="App-Honey">mood</span></a></p>
         <Map />
-        <ConnAttemps />
+        <ConnAttemps style={{width: "1100px"}} />
         <div className="App-TopConsumers-TopFlavors">
-          <TopConsumers />
-          <TopFlavours />
+          <TopConsumers style={{width: "468px"}} />
+          <TopFlavours style={{width: "468px"}} />
         </div>
       </div>
     );

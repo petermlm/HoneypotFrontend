@@ -1,0 +1,14 @@
+.HoneyTable {
+  margin: 0 auto;
+}
+
+.HoneyTable-Title {
+  display: flex;
+  justify-content: center;
+  font-family: 'Vollkorn', serif;
+  color: #ffffff;
+}
+
+.HoneyTable-Data {
+  height: 400px;
+}
