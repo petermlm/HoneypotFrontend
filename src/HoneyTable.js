@@ -42,6 +42,9 @@ class HoneyTable extends Component {
   }
 
   componentDidMount() {
+    if(this.props.endpoint === undefined) {
+      return;
+    }
     fetch(makeUrl(this.props.endpoint))
       .then(res => res.json())
       .then((data) => {
