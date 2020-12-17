@@ -83,6 +83,7 @@ export function makeTargetService(data) {
     "3306": "MySQL",
     "5432": "PostgreSQL",
     "7474": "Neo4j",
+    "9200": "Elasticsearch",
     "27017": "MongoDB",
   };
 
