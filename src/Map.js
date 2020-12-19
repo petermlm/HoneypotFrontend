@@ -3,8 +3,7 @@ import React, { Component } from 'react'
 import ReactTooltip from "react-tooltip";
 import { ComposableMap, Geographies, Geography, Graticule, Marker, Sphere } from "react-simple-maps";
 import { scaleLinear } from "d3-scale";
-import { settings } from './settings.js'
-import { makeUrl } from './util.js'
+import { endpoints, makeUrl } from './api.js'
 
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
@@ -83,7 +82,7 @@ class Map extends Component {
   }
 
   componentDidMount() {
-    fetch(makeUrl(settings.endpointMapData))
+    fetch(makeUrl(endpoints.mapData))
       .then(res => res.json())
       .then((data) => {
         var maxCount = Math.max.apply(Math, data.map(function(o) { return o.Count; }))

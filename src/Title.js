@@ -1,8 +1,7 @@
 import './Title.css';
 import './Common.css';
 import React, { Component } from 'react'
-import { makeUrl } from './util.js'
-import { settings } from './settings.js'
+import { endpoints, makeUrl } from './api.js'
 
 class Title extends Component {
   state = {
@@ -16,7 +15,7 @@ class Title extends Component {
   }
 
   componentDidMount() {
-    fetch(makeUrl(settings.endpointTotalConsumptions))
+    fetch(makeUrl(endpoints.totalConsumptions))
       .then(res => res.json())
       .then((data) => {
         var count = data["Count"];

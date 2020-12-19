@@ -3,7 +3,8 @@ import './Common.css';
 import React, { Component } from 'react'
 import moment from 'moment'
 import { AgGridColumn, AgGridReact } from 'ag-grid-react';
-import { makeUrl, getCountryName } from './util.js'
+import { getCountryName } from './util.js'
+import { makeUrl } from './api.js'
 
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';

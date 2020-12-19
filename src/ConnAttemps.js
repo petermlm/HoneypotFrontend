@@ -1,7 +1,7 @@
 import './ConnAttemps.css';
 import './Common.css';
 import HoneyTable, { makeRelativeTime, makeCountryName, makeTargetService } from './HoneyTable.js'
-import { settings } from './settings.js'
+import { endpoints } from './api.js'
 
 class ConnAttemps extends HoneyTable {
   render() {
@@ -11,7 +11,7 @@ class ConnAttemps extends HoneyTable {
         titleHoney="Honey"
         titleAfter="&nbsp;consumptions!"
         fields={["Time", "IP", "TargetService", "CountryName"]}
-        endpoint={settings.endpointConnAttemps}
+        endpoint={endpoints.connAttemps}
         dataTransform={[makeRelativeTime, makeCountryName, makeTargetService]}
         style={this.props.style}
       />
