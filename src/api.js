@@ -1,5 +1,6 @@
 import buildUrl from 'build-url';
 import { settings } from './settings.js'
+import { rangeToAPIRepr } from './Ranges.js'
 
 export let endpoints = {
   totalConsumptions: 'totalConsumptions',
@@ -14,8 +15,9 @@ export function makeUrl(endpoint) {
 }
 
 export function makeUrlList(endpoint, range) {
+  var rangeStr = rangeToAPIRepr(range);
   return buildUrl(settings.host, {
     path: endpoint,
-    queryParams: { range: range }
+    queryParams: { range: rangeStr },
   });
 }

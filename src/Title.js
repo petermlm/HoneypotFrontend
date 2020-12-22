@@ -10,7 +10,7 @@ class Title extends Component {
 
   render() {
     return (
-      <h1 className="Title Text-Common">Sweet&nbsp;<span className="Text-Honey">Honey</span>&nbsp;as been served a total of {this.state.count} times!</h1>
+      <h1 className="Title Text-Common">Sweet&nbsp;<span className="Text-Honey">Honey</span>&nbsp;has been served a total of {this.state.count} times!</h1>
     );
   }
 

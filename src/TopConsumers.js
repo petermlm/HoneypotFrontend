@@ -11,6 +11,7 @@ class TopConsumers extends HoneyTable {
         titleHoney="Consumers"
         titleAfter="!"
         fields={["CountryName", "Count"]}
+        curRange={this.props.curRange}
         endpoint={endpoints.topConsumers}
         dataTransform={makeCountryName}
         style={this.props.style}

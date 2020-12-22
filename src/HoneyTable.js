@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import moment from 'moment'
 import { AgGridColumn, AgGridReact } from 'ag-grid-react';
 import { getCountryName } from './util.js'
-import { makeUrl } from './api.js'
+import { makeUrlList } from './api.js'
 
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
@@ -14,9 +14,14 @@ class HoneyTable extends Component {
     data: []
   };
 
-  onGridReady = (params) => {
-    this.gridApi = params.api;
-    this.gridApi.sizeColumnsToFit();
+  componentDidMount() {
+    this.loadData();
+  }
+
+  componentDidUpdate(prevProps) {
+    if(this.props.curRange !== prevProps.curRange) {
+      this.loadData();
+    }
   }
 
   render() {
@@ -43,11 +48,16 @@ class HoneyTable extends Component {
     );
   }
 
-  componentDidMount() {
+  onGridReady = (params) => {
+    this.gridApi = params.api;
+    this.gridApi.sizeColumnsToFit();
+  }
+
+  loadData = () => {
     if(this.props.endpoint === undefined) {
       return;
     }
-    fetch(makeUrl(this.props.endpoint))
+    fetch(makeUrlList(this.props.endpoint, this.props.curRange))
       .then(res => res.json())
       .then((data) => {
         if(this.props.dataTransform) {

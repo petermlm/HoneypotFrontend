@@ -1,0 +1,13 @@
+.Buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.Buttons button {
+  margin: 0 5px;
+  font-size: 16pt;
+  border: none;
+  cursor: pointer;
+  padding: 10px 32px;
+  width: 175px;
+}
