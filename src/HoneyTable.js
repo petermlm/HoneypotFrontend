@@ -40,7 +40,11 @@ class HoneyTable extends Component {
           <span>{this.props.titleAfter}</span>
         </h2>
         <div className="HoneyTable-Data ag-theme-alpine grid-wrapper">
-          <AgGridReact rowData={this.state.data} onGridReady={this.onGridReady}>
+          <AgGridReact
+            rowData={this.state.data}
+            onGridReady={this.onGridReady}
+            pagination={true}
+          >
             {columns}
           </AgGridReact>
         </div>
