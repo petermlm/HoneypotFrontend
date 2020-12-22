@@ -1,5 +1,4 @@
-let settings = {
+export let settings = {
   host: 'http://localhost:8080/',
+  PageSize: 50,
 }
-
-export { settings };

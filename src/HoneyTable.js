@@ -5,6 +5,7 @@ import moment from 'moment'
 import { AgGridColumn, AgGridReact } from 'ag-grid-react';
 import { getCountryName } from './util.js'
 import { makeUrlList } from './api.js'
+import { settings } from './settings.js'
 
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
@@ -32,6 +33,10 @@ class HoneyTable extends Component {
       index++;
     });
 
+    if(this.data) {
+      var pagination = this.data.length > settings.PageSize;
+    }
+
     return (
       <div className="HoneyTable" style={this.props.style}>
         <h2 className="HoneyTable-Title Text-Common">
@@ -43,7 +48,8 @@ class HoneyTable extends Component {
           <AgGridReact
             rowData={this.state.data}
             onGridReady={this.onGridReady}
-            pagination={true}
+            pagination={pagination}
+            paginationPageSize={50}
           >
             {columns}
           </AgGridReact>
