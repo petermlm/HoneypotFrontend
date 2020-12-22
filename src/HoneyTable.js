@@ -33,8 +33,9 @@ class HoneyTable extends Component {
       index++;
     });
 
+    var pagination = false;
     if(this.data) {
-      var pagination = this.data.length > settings.PageSize;
+      pagination = this.data.length > settings.PageSize;
     }
 
     return (
