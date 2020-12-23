@@ -5,7 +5,6 @@ import moment from 'moment'
 import { AgGridColumn, AgGridReact } from 'ag-grid-react';
 import { getCountryName } from './util.js'
 import { makeUrlList } from './api.js'
-import { settings } from './settings.js'
 
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
@@ -27,11 +26,9 @@ class HoneyTable extends Component {
 
   render() {
     const columns = [];
-    var index = 0;
-    this.props.fields.forEach(field => {
+    for(const [index, field] of this.props.fields.entries()) {
       columns.push(<AgGridColumn key={index} field={field}></AgGridColumn>)
-      index++;
-    });
+    }
 
     return (
       <div className="HoneyTable" style={this.props.style}>

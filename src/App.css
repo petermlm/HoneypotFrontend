@@ -7,12 +7,3 @@
 .App-link {
   color: #61dafb;
 }
-
-.App-TopConsumers-TopFlavors {
-  display: flex;
-  justify-content: center;
-}
-
-.App-ConnAttemps {
-  width: 1000px;
-}

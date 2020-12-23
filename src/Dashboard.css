@@ -1,0 +1,8 @@
+.Dashboard-ConnAttemps {
+  width: 1000px;
+}
+
+.Dashboard-TopConsumers-TopFlavors {
+  display: flex;
+  justify-content: center;
+}
