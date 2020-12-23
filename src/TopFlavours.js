@@ -12,6 +12,7 @@ class TopFlavours extends HoneyTable {
         titleAfter="!"
         fields={["TargetService", "Count"]}
         curRange={this.props.curRange}
+        pagination={false}
         endpoint={endpoints.topFlavours}
         dataTransform={makeTargetService}
         style={this.props.style}

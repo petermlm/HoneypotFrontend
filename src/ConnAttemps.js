@@ -12,6 +12,7 @@ class ConnAttemps extends HoneyTable {
         titleAfter="&nbsp;consumptions!"
         fields={["Time", "IP", "TargetService", "CountryName"]}
         curRange={this.props.curRange}
+        pagination={true}
         endpoint={endpoints.connAttemps}
         dataTransform={[makeRelativeTime, makeCountryName, makeTargetService]}
         style={this.props.style}

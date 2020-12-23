@@ -33,11 +33,6 @@ class HoneyTable extends Component {
       index++;
     });
 
-    var pagination = false;
-    if(this.state.data) {
-      pagination = this.state.data.length > settings.PageSize;
-    }
-
     return (
       <div className="HoneyTable" style={this.props.style}>
         <h2 className="HoneyTable-Title Text-Common">
@@ -49,8 +44,8 @@ class HoneyTable extends Component {
           <AgGridReact
             rowData={this.state.data}
             onGridReady={this.onGridReady}
-            pagination={pagination}
-            paginationPageSize={50}
+            pagination={this.props.pagination}
+            paginationNumberFormatter={this.state.paginationNumberFormatter}
           >
             {columns}
           </AgGridReact>
