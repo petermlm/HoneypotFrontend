@@ -6,6 +6,7 @@ import countries from 'i18n-iso-countries'
 import Nav from './Nav.js'
 import Dashboard from './Dashboard.js'
 import Postgresql from './Postgresql.js'
+import Elasticsearch from './Elasticsearch.js'
 import Footer from './Footer.js';
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
           <Nav />
           <Switch>
             <Route path="/postgresql" component={Postgresql} />
+            <Route path="/elasticsearch" component={Elasticsearch} />
             <Route path="/" component={Dashboard} />
           </Switch>
           <Footer />

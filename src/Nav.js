@@ -11,6 +11,9 @@ class Nav extends Component {
     }, {
       "to": "/postgresql",
       "label": "PostgreSql",
+    }, {
+      "to": "/elasticsearch",
+      "label": "Elasticsearch",
     }];
 
     const nav = [];

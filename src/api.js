@@ -8,6 +8,7 @@ export let endpoints = {
   connAttemps: 'connAttemps',
   topConsumers: 'topConsumers',
   topFlavours: 'topFlavours',
+  getBytes: 'getBytes',
 }
 
 export function makeUrl(endpoint) {
