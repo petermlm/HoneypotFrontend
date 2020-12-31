@@ -2,17 +2,17 @@ import React, { Component } from 'react'
 import HoneyTable, { makeRelativeTime } from './HoneyTable.js'
 import { endpoints } from './api.js'
 
-class Elasticsearch extends Component {
+class Neo4j extends Component {
   render() {
     return (
       <HoneyTable
-        titleBefore="Elastic"
-        titleHoney="honey"
+        titleBefore="Neo4"
+        titleHoney="Honey"
         titleAfter="!"
         fields={["Time", "Bytes"]}
         curRange={""}
         pagination={true}
-        endpoint={endpoints.getBytesElasticsearch}
+        endpoint={endpoints.getBytesNeo4j}
         dataTransform={makeRelativeTime}
         style={{width: "1100px"}}
       />
@@ -20,4 +20,4 @@ class Elasticsearch extends Component {
   }
 }
 
-export default Elasticsearch;
+export default Neo4j;

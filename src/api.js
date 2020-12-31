@@ -8,7 +8,12 @@ export let endpoints = {
   connAttemps: 'connAttemps',
   topConsumers: 'topConsumers',
   topFlavours: 'topFlavours',
-  getBytes: 'getBytes',
+
+  getBytesMysql: 'getBytes/mysql',
+  getBytesPostgresql: 'getBytes/postgresql',
+  getBytesNeo4j: 'getBytes/neo4j',
+  getBytesElasticsearch: 'getBytes/elasticsearch',
+  getBytesMongodb: 'getBytes/mongodb',
 }
 
 export function makeUrl(endpoint) {

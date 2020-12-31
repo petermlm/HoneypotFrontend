@@ -1,12 +1,21 @@
-import './Postgresql.css';
 import React, { Component } from 'react'
+import HoneyTable, { makeRelativeTime } from './HoneyTable.js'
+import { endpoints } from './api.js'
 
 class Postgresql extends Component {
   render() {
     return (
-      <div>
-        I'm not developed yet :) Go back to the dashboard to get some of that sweet&nbsp;<span className="Text-Honey">honey</span>!.
-      </div>
+      <HoneyTable
+        titleBefore="Post"
+        titleHoney="honey"
+        titleAfter="!"
+        fields={["Time", "Bytes"]}
+        curRange={""}
+        pagination={true}
+        endpoint={endpoints.getBytesPostgresql}
+        dataTransform={makeRelativeTime}
+        style={{width: "1100px"}}
+      />
     );
   }
 }

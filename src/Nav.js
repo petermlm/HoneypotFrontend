@@ -14,6 +14,15 @@ class Nav extends Component {
     }, {
       "to": "/elasticsearch",
       "label": "Elasticsearch",
+    }, {
+      "to": "/neo4j",
+      "label": "Neo4j",
+    }, {
+      "to": "/mysql",
+      "label": "MySQL",
+    }, {
+      "to": "/mongodb",
+      "label": "MongoDB",
     }];
 
     const nav = [];

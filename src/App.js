@@ -7,6 +7,9 @@ import Nav from './Nav.js'
 import Dashboard from './Dashboard.js'
 import Postgresql from './Postgresql.js'
 import Elasticsearch from './Elasticsearch.js'
+import Neo4j from './Neo4j.js'
+import Mysql from './Mysql.js'
+import MongoDB from './Mongodb.js'
 import Footer from './Footer.js';
 
 class App extends Component {
@@ -23,6 +26,9 @@ class App extends Component {
           <Switch>
             <Route path="/postgresql" component={Postgresql} />
             <Route path="/elasticsearch" component={Elasticsearch} />
+            <Route path="/neo4j" component={Neo4j} />
+            <Route path="/mysql" component={Mysql} />
+            <Route path="/mongodb" component={MongoDB} />
             <Route path="/" component={Dashboard} />
           </Switch>
           <Footer />
