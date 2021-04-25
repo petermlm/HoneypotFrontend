@@ -3,6 +3,7 @@
 docker build -t honeypot-frontend .
 
 docker run \
+    -d \
     --rm \
     --name honeypot-frontend-run \
     -p 8200:8200 \
