@@ -22,7 +22,6 @@ class App extends Component {
           <Switch>
             {
               // TODO: Display more specific tables one day
-              // Display more specific tables one day
               // <Route path="/postgresql" component={Postgresql} />
               // <Route path="/neo4j" component={Neo4j} />
               // <Route path="/mysql" component={Mysql} />
