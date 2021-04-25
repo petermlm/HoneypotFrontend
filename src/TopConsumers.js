@@ -1,5 +1,6 @@
 import './TopConsumers.css';
 import './Common.css';
+import React from 'react';
 import HoneyTable, { makeCountryName } from './HoneyTable.js'
 import { endpoints } from './api.js'
 

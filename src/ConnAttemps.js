@@ -1,5 +1,6 @@
 import './ConnAttemps.css';
 import './Common.css';
+import React from 'react';
 import HoneyTable, { makeRelativeTime, makeCountryName, makeTargetService } from './HoneyTable.js'
 import { endpoints } from './api.js'
 

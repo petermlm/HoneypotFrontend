@@ -1,5 +1,6 @@
 import './TopFlavours.css';
 import './Common.css';
+import React from 'react';
 import HoneyTable, { makeTargetService} from './HoneyTable.js'
 import { endpoints } from './api.js'
 

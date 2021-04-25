@@ -1,8 +1,8 @@
 {
-  "name": "honeypot",
-  "version": "0.1.0",
+  "name": "honey",
+  "version": "0.2.0",
   "private": true,
-  "homepage": "https://pedromelgueira.com/melgera",
+  "homepage": "https://pedromelgueira.com/honey",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",

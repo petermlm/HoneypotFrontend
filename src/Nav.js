@@ -5,24 +5,25 @@ import { NavLink } from "react-router-dom";
 
 class Nav extends Component {
   render() {
+    // TODO: Display more specific tables one day
     var navObjs = [{
       "to": "/",
       "label": "Dashboard",
     }, {
-      "to": "/postgresql",
-      "label": "PostgreSql",
-    }, {
       "to": "/elasticsearch",
       "label": "Elasticsearch",
-    }, {
-      "to": "/neo4j",
-      "label": "Neo4j",
-    }, {
-      "to": "/mysql",
-      "label": "MySQL",
-    }, {
-      "to": "/mongodb",
-      "label": "MongoDB",
+    // }, {
+    //   "to": "/postgresql",
+    //   "label": "PostgreSql",
+    // }, {
+    //   "to": "/neo4j",
+    //   "label": "Neo4j",
+    // }, {
+    //   "to": "/mysql",
+    //   "label": "MySQL",
+    // }, {
+    //   "to": "/mongodb",
+    //   "label": "MongoDB",
     }];
 
     const nav = [];
