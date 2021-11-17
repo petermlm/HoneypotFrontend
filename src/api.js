@@ -17,12 +17,12 @@ export let endpoints = {
 }
 
 export function makeUrl(endpoint) {
-  return buildUrl(settings.host, { path: endpoint });
+  return buildUrl(settings.APIBase, { path: endpoint });
 }
 
 export function makeUrlList(endpoint, range) {
   var rangeStr = rangeToAPIRepr(range);
-  return buildUrl(settings.host, {
+  return buildUrl(settings.APIBase, {
     path: endpoint,
     queryParams: { range: rangeStr },
   });

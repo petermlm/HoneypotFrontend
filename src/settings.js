@@ -1,4 +1,6 @@
+const apiBase = process.env.NODE_ENV === 'production' ? 'https://pedromelgueira.com/honey/' : 'http://localhost:8080/';
+
 export let settings = {
-  host: 'http://localhost:8080/',
+  APIBase: apiBase,
   PageSize: 50,
 }
