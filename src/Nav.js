@@ -5,39 +5,29 @@ import { NavLink } from "react-router-dom";
 
 class Nav extends Component {
   render() {
-    // TODO: Display more specific tables one day
     var navObjs = [{
       "to": "/",
-      "label": "Dashboard",
+      "label": "Honey",
     }, {
-      "to": "/elasticsearch",
-      "label": "Elasticsearch",
-    // }, {
-    //   "to": "/postgresql",
-    //   "label": "PostgreSql",
-    // }, {
-    //   "to": "/neo4j",
-    //   "label": "Neo4j",
-    // }, {
-    //   "to": "/mysql",
-    //   "label": "MySQL",
-    // }, {
-    //   "to": "/mongodb",
-    //   "label": "MongoDB",
+      "to": "/premium",
+      "label": "Premium",
+    }, {
+      "to": "/about",
+      "label": "About",
     }];
 
     const nav = [];
     for(const [index, ele] of navObjs.entries()) {
       nav.push(
         <li key={index}>
-          <NavLink activeClassName="Background-Honey" exact to={ele.to}>{ele.label}</NavLink>
+          <NavLink activeClassName="Background-Honey Nav-Main-Active" exact to={ele.to}>{ele.label}</NavLink>
         </li>
       );
     }
 
     return (
       <nav className="Nav-Main">
-        <ul>
+        <ul className="Text-Common">
           {nav}
         </ul>
       </nav>

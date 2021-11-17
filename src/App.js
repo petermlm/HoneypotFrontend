@@ -5,7 +5,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import countries from 'i18n-iso-countries'
 import Nav from './Nav.js'
 import Dashboard from './Dashboard.js'
-import Elasticsearch from './Elasticsearch.js'
+import About from './About.js'
+import Premium from './Premium.js'
 import Footer from './Footer.js';
 
 class App extends Component {
@@ -20,14 +21,8 @@ class App extends Component {
         <div className="App">
           <Nav />
           <Switch>
-            {
-              // TODO: Display more specific tables one day
-              // <Route path="/postgresql" component={Postgresql} />
-              // <Route path="/neo4j" component={Neo4j} />
-              // <Route path="/mysql" component={Mysql} />
-              // <Route path="/mongodb" component={MongoDB} />
-            }
-            <Route path="/elasticsearch" component={Elasticsearch} />
+            <Route path="/about" component={About} />
+            <Route path="/premium" component={Premium} />
             <Route path="/" component={Dashboard} />
           </Switch>
           <Footer />

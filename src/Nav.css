@@ -12,16 +12,20 @@
 
 .Nav-Main li a {
   display: block;
-  color: white;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-weight: bold;
 }
 
-.Nav-Main li a:hover:not(.active) {
+.Nav-Main li a:not(.Nav-Main-Active) {
+  color: white;
+}
+
+.Nav-Main li a:hover:not(.Nav-Main-Active) {
   background-color: #111;
 }
 
 .Nav-Main-Active {
-  background-color: #4CAF50;
 }
