@@ -18,7 +18,28 @@ class Premium extends Component {
           dataTransform={makeRelativeTime}
           style={{width: "1100px"}}
         />
-        <h2 className="Title Text-Common">More to come&nbsp;<span className="Text-Honey">Soon</span>?</h2>
+        <HoneyTable
+          titleBefore="Mongo"
+          titleHoney="honey"
+          titleAfter="!"
+          fields={["Time", "Bytes"]}
+          curRange={""}
+          pagination={true}
+          endpoint={endpoints.getBytesMongodb}
+          dataTransform={makeRelativeTime}
+          style={{width: "1100px"}}
+        />
+        <HoneyTable
+          titleBefore="Neo4"
+          titleHoney="honey"
+          titleAfter="!"
+          fields={["Time", "Bytes"]}
+          curRange={""}
+          pagination={true}
+          endpoint={endpoints.getBytesNeo4j}
+          dataTransform={makeRelativeTime}
+          style={{width: "1100px"}}
+        />
       </div>
     );
   }
