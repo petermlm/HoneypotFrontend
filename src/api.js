@@ -1,4 +1,3 @@
-import buildUrl from 'build-url';
 import { settings } from './settings.js'
 import { rangeToAPIRepr } from './Ranges.js'
 
@@ -17,13 +16,11 @@ export let endpoints = {
 }
 
 export function makeUrl(endpoint) {
-  return buildUrl(settings.APIBase, { path: endpoint });
+  return `${settings.APIBase}${endpoint}`;
 }
 
 export function makeUrlList(endpoint, range) {
-  var rangeStr = rangeToAPIRepr(range);
-  return buildUrl(settings.APIBase, {
-    path: endpoint,
-    queryParams: { range: rangeStr },
-  });
+  let path = makeUrl(endpoint);
+  let rangeStr = rangeToAPIRepr(range);
+  return `${path}?range=${rangeStr}`;
 }
