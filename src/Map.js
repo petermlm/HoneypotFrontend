@@ -5,8 +5,7 @@ import { ComposableMap, Geographies, Geography, Graticule, Sphere } from "react-
 import { scaleLinear } from "d3-scale";
 import { endpoints, makeUrlList } from './api.js'
 
-const geoUrl =
-  "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+const geography = process.env.PUBLIC_URL + "/world-countries.json";
 
 const colorScale = scaleLinear()
   .domain([0.0, 1.0])
@@ -41,7 +40,7 @@ class Map extends Component {
         <ComposableMap projectionConfig={{ scale: 147 }} data-tip="" width={900} height={450}>
           <Sphere stroke="#E4E5E6" strokeWidth={0.5} />
           <Graticule stroke="#E4E5E6" strokeWidth={0.5} />
-          <Geographies geography={geoUrl} stroke="#29465b" strokeWidth={0.5}>
+          <Geographies geography={geography} stroke="#29465b" strokeWidth={0.5}>
             {({ geographies }) =>
               geographies.map((geo) => {
                 var count = 0;
