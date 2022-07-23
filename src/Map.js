@@ -45,7 +45,7 @@ class Map extends Component {
               geographies.map((geo) => {
                 var count = 0;
                 var d = null;
-                var code = geo.properties.ISO_A2;
+                var code = geo.properties["Alpha-2"];
                 if(code in this.state.data) {
                   count = this.state.data[code]
                   d = count / this.state.maxCount;
